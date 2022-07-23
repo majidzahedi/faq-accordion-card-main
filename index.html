@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              veryDarkBlue: "hsl(238, 29%, 16%)",
+              softRed: "hsl(14, 88%, 65%)",
+              veryDarkGrayishBlue: "hsl(247, 12%, 33%)",
+              darkGrayishBlue: "hsl(240, 6%, 50%)",
+              lightGrayishBlue: "hsl(240, 5%, 91%)",
+            },
+            fontFamily: {
+              sans: ["Kumbh Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .attribution {
+        font-family: "lexend Deca", "sans-serif";
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(277, 64%, 61%);
+      }
+      .filter-purple {
+        filter: brightness(61%) sepia(64%) hue-rotate(227deg) saturate(650%)
+          contrast(85%);
+      }
+
+      details > summary {
+        list-style: none;
+      }
+
+      .background {
+        background-image: linear-gradient(
+          to bottom,
+          hsl(273, 75%, 66%),
+          hsl(240, 73%, 65%)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex items-center justify-center background">
+      <div
+        class="relative flex flex-col lg:flex-row my-44 mb-32 lg:my-0 lg:mb-0 items-center justify-center space-y-5 lg:space-y-0 px-8 py-20 mx-3 bg-white shadow-lg rounded-3xl pt-20 lg:pt-20 bg-[url('./images/bg-pattern-mobile.svg')] lg:bg-[url('./images/illustration-woman-online-desktop.svg'),_url('./images/bg-pattern-desktop.svg')] bg-no-repeat bg-top lg:bg-[position:_-17%_50%,_left_-546px_bottom_-145px] lg:h-[512px] w-[800px]"
+      >
+        <img
+          src="./images/illustration-woman-online-mobile.svg"
+          class="absolute -top-36 scale-75 lg:hidden w-80"
+          alt="mobile"
+        />
+        <img
+          src="./images/illustration-box-desktop.svg"
+          class="absolute top-48 origin-center hover:-left-20 -left-28 duration-300 hidden lg:block"
+          alt="box"
+        />
+        <div
+          class="lg:w-1/2 hidden lg:block bg-[url('./images/bg-pattern-desktop.svg')] bg-contain"
+        ></div>
+        <div
+          class="flex flex-col space-y-5 items-center justify-center lg:w-1/2"
+        >
+          <h1 class="text-3xl font-bold uppercase">Faq</h1>
+          <div
+            class="flex flex-col items-stretch w-[280px] text-veryDarkGrayishBlue"
+          >
+            <!-- ITME 1 -->
+            <details
+              id="1"
+              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+            >
+              <summary
+                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+              >
+                <div class="flex justify-between items-center">
+                  <h2 class="text-sm">How many team member can i invite?</h2>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="group-open:rotate-180"
+                  />
+                </div>
+              </summary>
+              <div
+                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+              >
+                You can invite up to 2 additional users on the Free plan. There
+                is no limit on team members for the Premium plan.
+              </div>
+            </details>
+
+            <!-- ITME 2 -->
+            <details
+              id="2"
+              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              open
+            >
+              <summary
+                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+              >
+                <div class="flex justify-between items-center">
+                  <h2 class="text-sm">What is the maximum file upload size?</h2>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="group-open:rotate-180"
+                  />
+                </div>
+              </summary>
+              <div
+                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+              >
+                No more than 2GB. All files in your account must fit your
+                allotted storage space.
+              </div>
+            </details>
+
+            <!-- ITME 3 -->
+            <details
+              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              id="3"
+            >
+              <summary
+                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+              >
+                <div class="flex justify-between items-center">
+                  <h2 class="text-sm">How do I reset my password?</h2>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="group-open:rotate-180"
+                  />
+                </div>
+              </summary>
+              <div
+                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+              >
+                Click “Forgot password” from the login page or “Change password”
+                from your profile page. A reset link will be emailed to you.
+              </div>
+            </details>
+
+            <!-- ITME 4 -->
+            <details
+              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              id="4"
+            >
+              <summary
+                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+              >
+                <div class="flex justify-between items-center">
+                  <h2 class="text-sm">Can I cancel my subscription?</h2>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="group-open:rotate-180"
+                  />
+                </div>
+              </summary>
+              <div
+                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+              >
+                Yes! Send us a message and we’ll process your request no
+                questions asked.
+              </div>
+            </details>
+
+            <!-- ITME 5 -->
+            <details
+              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              id="5"
+            >
+              <summary
+                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+              >
+                <div class="flex justify-between items-center">
+                  <h2 class="text-sm">Do you provide additional support?</h2>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    class="group-open:rotate-180"
+                  />
+                </div>
+              </summary>
+              <div
+                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+              >
+                Chat and email support is available 24/7. Phone lines are open
+                during normal business hours.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const details = document.querySelectorAll("details");
+      details.forEach((detail) =>
+        detail.addEventListener("click", () =>
+          details.forEach(
+            (d) => d.id !== detail.id && d.removeAttribute("open")
+          )
+        )
+      );
+    </script>
+  </body>
+</html>
