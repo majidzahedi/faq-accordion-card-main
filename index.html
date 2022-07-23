@@ -65,42 +65,50 @@
           hsl(240, 73%, 65%)
         );
       }
+
+      @media only screen and (min-width: 1024px) {
+        .illustration {
+          background-image: url("./images/illustration-woman-online-desktop.svg"),
+            url("./images/bg-pattern-desktop.svg");
+          background-position: -17% 50%, left -546px bottom -145px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="min-h-screen flex items-center justify-center background">
+    <div class="background flex min-h-screen items-center justify-center">
       <div
-        class="relative flex flex-col lg:flex-row my-44 mb-32 lg:my-0 lg:mb-0 items-center justify-center space-y-5 lg:space-y-0 px-8 py-20 mx-3 bg-white shadow-lg rounded-3xl pt-20 lg:pt-20 bg-[url('./images/bg-pattern-mobile.svg')] lg:bg-[url('./images/illustration-woman-online-desktop.svg'),_url('./images/bg-pattern-desktop.svg')] bg-no-repeat bg-top lg:bg-[position:_-17%_50%,_left_-546px_bottom_-145px] lg:h-[512px] w-[800px]"
+        class="illustration group relative my-44 mx-3 mb-32 flex w-[800px] max-w-fit flex-col items-center justify-center space-y-9 rounded-3xl bg-white bg-[url('./images/bg-pattern-mobile.svg')] bg-top bg-no-repeat px-8 py-20 pt-20 shadow-lg lg:my-0 lg:mb-0 lg:h-[512px] lg:max-w-full lg:flex-row lg:space-y-0 lg:pt-20"
       >
         <img
           src="./images/illustration-woman-online-mobile.svg"
-          class="absolute -top-36 scale-75 lg:hidden w-80"
+          class="absolute -top-36 w-80 scale-75 lg:hidden"
           alt="mobile"
         />
         <img
           src="./images/illustration-box-desktop.svg"
-          class="absolute top-48 origin-center hover:-left-20 -left-28 duration-300 hidden lg:block"
+          class="absolute top-48 -left-28 hidden origin-center duration-300 group-hover:-left-20 lg:block"
           alt="box"
         />
         <div
-          class="lg:w-1/2 hidden lg:block bg-[url('./images/bg-pattern-desktop.svg')] bg-contain"
+          class="hidden bg-[url('./images/bg-pattern-desktop.svg')] bg-contain lg:block lg:w-1/2"
         ></div>
         <div
-          class="flex flex-col space-y-5 items-center justify-center lg:w-1/2"
+          class="flex flex-col items-center justify-center space-y-5 lg:w-1/2"
         >
           <h1 class="text-3xl font-bold uppercase">Faq</h1>
           <div
-            class="flex flex-col items-stretch w-[280px] text-veryDarkGrayishBlue"
+            class="text-veryDarkGrayishBlue flex w-[280px] flex-col items-stretch"
           >
             <!-- ITME 1 -->
             <details
               id="1"
-              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              class="border-lightGrayishBlue group flex flex-col justify-center border-b py-3 duration-300"
             >
               <summary
-                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+                class="cursor-pointer bg-inherit group-open:font-bold group-open:text-veryDarkBlue"
               >
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h2 class="text-sm">How many team member can i invite?</h2>
                   <img
                     src="./images/icon-arrow-down.svg"
@@ -109,7 +117,7 @@
                 </div>
               </summary>
               <div
-                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+                class="max-w-[90%] py-3 text-start text-xs text-darkGrayishBlue"
               >
                 You can invite up to 2 additional users on the Free plan. There
                 is no limit on team members for the Premium plan.
@@ -119,13 +127,13 @@
             <!-- ITME 2 -->
             <details
               id="2"
-              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              class="border-lightGrayishBlue group flex flex-col justify-center border-b py-3 duration-300"
               open
             >
               <summary
-                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+                class="cursor-pointer bg-inherit group-open:font-bold group-open:text-veryDarkBlue"
               >
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h2 class="text-sm">What is the maximum file upload size?</h2>
                   <img
                     src="./images/icon-arrow-down.svg"
@@ -134,7 +142,7 @@
                 </div>
               </summary>
               <div
-                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+                class="max-w-[90%] py-3 text-start text-xs text-darkGrayishBlue"
               >
                 No more than 2GB. All files in your account must fit your
                 allotted storage space.
@@ -143,13 +151,13 @@
 
             <!-- ITME 3 -->
             <details
-              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              class="border-lightGrayishBlue group flex flex-col justify-center border-b py-3 duration-300"
               id="3"
             >
               <summary
-                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+                class="cursor-pointer bg-inherit group-open:font-bold group-open:text-veryDarkBlue"
               >
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h2 class="text-sm">How do I reset my password?</h2>
                   <img
                     src="./images/icon-arrow-down.svg"
@@ -158,7 +166,7 @@
                 </div>
               </summary>
               <div
-                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+                class="max-w-[90%] py-3 text-start text-xs text-darkGrayishBlue"
               >
                 Click “Forgot password” from the login page or “Change password”
                 from your profile page. A reset link will be emailed to you.
@@ -167,13 +175,13 @@
 
             <!-- ITME 4 -->
             <details
-              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              class="border-lightGrayishBlue group flex flex-col justify-center border-b py-3 duration-300"
               id="4"
             >
               <summary
-                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+                class="cursor-pointer bg-inherit group-open:font-bold group-open:text-veryDarkBlue"
               >
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h2 class="text-sm">Can I cancel my subscription?</h2>
                   <img
                     src="./images/icon-arrow-down.svg"
@@ -182,7 +190,7 @@
                 </div>
               </summary>
               <div
-                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+                class="max-w-[90%] py-3 text-start text-xs text-darkGrayishBlue"
               >
                 Yes! Send us a message and we’ll process your request no
                 questions asked.
@@ -191,13 +199,13 @@
 
             <!-- ITME 5 -->
             <details
-              class="flex flex-col justify-center border-b border-lightGrayishBlue duration-300 group py-3"
+              class="border-lightGrayishBlue group flex flex-col justify-center border-b py-3 duration-300"
               id="5"
             >
               <summary
-                class="bg-inherit cursor-pointer group-open:text-veryDarkBlue group-open:font-bold"
+                class="cursor-pointer bg-inherit group-open:font-bold group-open:text-veryDarkBlue"
               >
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h2 class="text-sm">Do you provide additional support?</h2>
                   <img
                     src="./images/icon-arrow-down.svg"
@@ -206,7 +214,7 @@
                 </div>
               </summary>
               <div
-                class="text-xs py-3 text-start max-w-[90%] text-darkGrayishBlue"
+                class="max-w-[90%] py-3 text-start text-xs text-darkGrayishBlue"
               >
                 Chat and email support is available 24/7. Phone lines are open
                 during normal business hours.
